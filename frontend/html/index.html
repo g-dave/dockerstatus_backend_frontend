@@ -11,27 +11,36 @@
 
 <body>
 
-<table class ="table table-hover" id ="table" data-toggle="table" data-url="http://127.0.0.1:5000/containers"> 
+<table class ="table table-hover" 
+    id ="table" 
+    data-toggle="table" 
+    data-search="true" 
+    data-show-columns="true" 
+    data-buttons-align="left" 
+    data-buttons-prefix="btn-sm btn"
+    data-show-footer="true"
+    data-footer-style="footerStyle"
+    data-url="http://127.0.0.1:5000/containers"> 
     <thead>
         <tr>
-            <th data-field="containerid" data-sortable="true">containerid</th>
-            <th data-field="name" data-sortable="true">name</th>
+            <th data-field="containerid" data-sortable="true" data-footer-formatter="total:">containerid</th>
+            <th data-field="name" data-sortable="true" data-footer-formatter="total">name</th>
             <th data-field="status" data-sortable="true">status</th>
             <th data-field="node" data-sortable="true">node</th>
             <th data-field="timestamp" data-sortable="true">timestamp</th>
         </tr>
     </thead>
 </table>
+<script>
+    function total(data) {
+    return data.length
+    }
+  </script>
 </body>
 
 <!-- Required js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.js"></script>
-<script>
-    $(table).bootstrapTable('refresh', {
-        url: 'https://raw.githubusercontent.com/wenzhixin/bootstrap-table-examples/master/json/data1.json'
-    });
-</script>
 
 </html>
