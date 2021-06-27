@@ -6,4 +6,4 @@ But I'm NOT A DEVELOPER, just a guy with an hobbie approach. I've tried to setup
 
 I never used javascript before. Python I used before, but I have only some very very low skills. In the end it is working like it was supposed to do. So I can reuse and evolve in later projects.
 
-![Alt screenshot](/Screenshot.png?raw=true "screenshot")
+![Alt screenshot](/Screenshot_01.png?raw=true "screenshot")
